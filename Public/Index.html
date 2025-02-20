@@ -4,15 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aplicación CRUD</title>
-    <link rel="stylesheet" href="styles.css" /> 
+    <!-- Estilos para el botón y el layout -->
+    <style>
+      .button-container {
+        position: fixed; /* Fija el botón en la pantalla */
+        top: 20px; /* Distancia desde la parte superior */
+        right: 20px; /* Distancia desde la derecha */
+        z-index: 1000; /* Asegura que el botón esté por encima del contenido */
+      }
+
+      /* Estilos para el botón */
+      .crud-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .crud-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
   <body>
-    <div id="app">
-      <h1>Aplicación CRUD</h1>
-      <div id="content">
-      </div>
+    <!-- Contenedor para el botón -->
+    <div class="button-container">
+      <a href="http://localhost:3000/products/new">
+        <button class="crud-button">Ir al formulario de producto</button>
+      </a>
     </div>
+
+    <!-- Contenedor donde React montará la aplicación -->
     <div id="root"></div>
-    <script type="module" src="../src/index.js"></script> 
+
+    <!-- Script para cargar la aplicación React -->
+    <script type="module" src="../src/main.jsx"></script>
   </body>
 </html>
